@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    pinecone:
+      build:
+        context: ..
+        dockerfile: docker/Dockerfile.master
+        args:
+          - REACT_APP_NAME=BertholdsBed-master
+      ports:
+        - "8080:80"
