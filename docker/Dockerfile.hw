@@ -11,6 +11,5 @@ RUN npm run build
 FROM nginx:alpine3.18
 LABEL authors="Nar Varg"
 EXPOSE 80
-COPY --from=build /app/redirects.conf /usr/share/nginx
-COPY --from=build /app/nginx.conf /usr/share/nginx
+COPY --from=build /app/nginx/* /usr/share/nginx
 COPY --from=build /app/build /usr/share/nginx/html
