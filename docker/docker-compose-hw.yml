@@ -3,7 +3,7 @@ services:
     pinecone:
       build:
         context: ..
-        dockerfile: Dockerfile.hw
+        dockerfile: docker/Dockerfile.hw
         args:
           - REACT_APP_NAME=BertholdsBed-heartwood
       ports:
