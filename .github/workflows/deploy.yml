@@ -26,7 +26,7 @@ jobs:
           echo $DOCKER_TOKEN | docker login --username $DOCKER_USERNAME --password-stdin
           cd - && npm run heartwood
         env:
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
