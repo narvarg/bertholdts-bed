@@ -28,5 +28,5 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
