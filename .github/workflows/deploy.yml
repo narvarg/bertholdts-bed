@@ -18,7 +18,6 @@ jobs:
       - name: Build and Deploy
         run: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-          npm cache clean --force
           npm run heartwood
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
