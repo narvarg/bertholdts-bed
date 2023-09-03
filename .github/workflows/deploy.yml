@@ -1,4 +1,4 @@
-name: Deploy to Local NGINX Docker
+name: Deploy
 
 on:
   workflow_run:
@@ -9,8 +9,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
-    environment: production
+    runs-on: self-hosted
+    environment: heartwood
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout code
@@ -23,4 +23,3 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          
