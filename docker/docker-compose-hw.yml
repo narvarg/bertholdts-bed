@@ -5,6 +5,6 @@ services:
         context: ..
         dockerfile: Dockerfile.hw
         args:
-          - REACT_APP_NAME=BertholdsBed-master
+          - REACT_APP_NAME=BertholdsBed-heartwood
       ports:
         - "8080:80"
