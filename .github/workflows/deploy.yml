@@ -1,0 +1,21 @@
+name: Deploy to Local NGINX Docker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and Deploy
+        run: |
+          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          npm run master
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
