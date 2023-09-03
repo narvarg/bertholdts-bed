@@ -2,6 +2,7 @@
   "name": "bertholdtsbed",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.11",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cypress": "^13.1.0",
     "eslint-plugin-prettier": "^5.0.0"
   }
 }
