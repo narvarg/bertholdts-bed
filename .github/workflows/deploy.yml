@@ -2,7 +2,7 @@ name: Deploy to Local NGINX Docker
 
 on:
   workflow_run:
-    workflows: [ESLint, CodeQL]
+    workflows: [ESLint]
     branches: [master]
     types:
       - completed
