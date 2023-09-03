@@ -21,9 +21,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Build and Deploy
         run: |
-          mkdir /etc/secrets && cd "$_"
-          echo > openai_key $OPENAI_KEY && echo > weatherapi_key $WEATHERAPI_KEY
-          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          sudo mkdir /etc/secrets && cd "$_"
+          sudo echo > openai_key $OPENAI_KEY && echo > weatherapi_key $WEATHERAPI_KEY
+          echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
           cd - && npm run heartwood
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
