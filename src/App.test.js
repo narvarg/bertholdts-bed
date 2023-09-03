@@ -1,9 +1,10 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import test from 'ava';
 
-test('renders hello world text', () => {
-  render(<App />);
-  const screenText = screen.getByText("Hello World!");
-  expect(screenText).toBeVisible();
+test('foo', t => {
+    t.pass();
+});
+
+test('bar', async t => {
+    const bar = Promise.resolve('bar');
+    t.is(await bar, 'bar');
 });
