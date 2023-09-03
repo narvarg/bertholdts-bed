@@ -1,5 +1,9 @@
 name: Deploy
 
+concurrency:
+  group: hw-${{ toJson(github.event.inputs.array) }}
+  cancel-in-progress: false
+
 on:
   workflow_run:
     workflows: [CodeQL]
