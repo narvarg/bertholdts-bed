@@ -4,7 +4,7 @@
 
 This repository handles the development and deployments for [https://bertholdtsbed.com](https://bertholdtsbed.com), an AI/ML-driven weather application
 
-## To run the project:
+## To run the project
 
 ### On local:
 * Clone the repository using `git clone https://github.com/NarVarg/BertholdtsBed.git`
@@ -20,6 +20,6 @@ This repository handles the development and deployments for [https://bertholdtsb
 * Run the commands `cd BertholdtsBed` and `npm run dev` to install and run the containerized application
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser
 
-## Testing:
+## Testing
 * For unit testing use `npm run test` or `npm t` to run the AVA suite
 * For functional testing `npm run cypress:open` will start the Cypress panel for component and E2E testing
