@@ -15,12 +15,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-dev.yml up -d --build",
+    "master": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-master.yml up -d --build"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -36,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint-plugin-prettier": "^5.0.0"
+    "@babel/eslint-parser": "^7.22.11",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
   }
 }
