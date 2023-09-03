@@ -12,3 +12,10 @@ This repository handles the development and deployments for [https://bertholdtsb
 * Provide the path references to your API key files in `src/constants/apiRefs.js`
 * Use `npm start` to run the application in development mode
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser
+
+## Alternatively with Docker:
+* Install and setup [Docker](https://www.docker.com/)
+* Clone the repository using `git clone https://github.com/NarVarg/BertholdtsBed.git`
+* Run the commands `cd BertholdtsBed` and `npm run dev` to install and run the containerized application
+* Open [http://localhost:3000](http://localhost:3000) to view it in your browser
+* 
