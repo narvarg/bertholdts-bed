@@ -5,11 +5,6 @@ concurrency:
   cancel-in-progress: false
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches:
-      - master
   workflow_run:
     workflows: [Compile/Test]
     branches: [master]
@@ -20,7 +15,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     environment: heartwood
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} && ${{ github.event.pull_request.merged == true }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: checkout code
         uses: actions/checkout@v3
