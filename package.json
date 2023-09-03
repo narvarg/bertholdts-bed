@@ -4,8 +4,6 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -14,7 +12,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "ava",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject",
     "dev": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-dev.yml up -d --build",
     "heartwood": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-hw.yml up -d --build"
@@ -39,6 +38,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.11",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "ava": "^5.3.1",
     "cypress": "^13.1.0",
     "eslint-plugin-prettier": "^5.0.0"
   }
