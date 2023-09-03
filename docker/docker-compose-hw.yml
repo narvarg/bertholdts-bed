@@ -3,7 +3,7 @@ services:
     pinecone:
       build:
         context: ..
-        dockerfile: docker/Dockerfile.master
+        dockerfile: Dockerfile.hw
         args:
           - REACT_APP_NAME=BertholdsBed-master
       ports:
