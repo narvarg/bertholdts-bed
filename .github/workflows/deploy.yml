@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build and Deploy
         run: |
-          echo $WRITE_KEY | sudo -S mkdir /etc/secrets && cd "$_"
+          echo $WRITE_KEY | sudo -S mkdir -p /etc/secrets && cd "$_"
           sudo -s eval 'echo > openai_key $OPENAI_KEY; echo > weatherapi_key $WEATHERAPI_KEY'
           echo $DOCKER_TOKEN | docker login --username $DOCKER_USERNAME --password-stdin
           cd - && npm run heartwood
