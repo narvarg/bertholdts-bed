@@ -23,10 +23,10 @@ jobs:
         run: |
           sudo mkdir /etc/secrets && cd "$_"
           sudo echo > openai_key $OPENAI_KEY && echo > weatherapi_key $WEATHERAPI_KEY
-          echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
+          echo $DOCKER_TOKEN | docker login --username $DOCKER_USERNAME --password-stdin
           cd - && npm run heartwood
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
