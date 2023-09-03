@@ -7,7 +7,7 @@ services:
       ports:
         - "3000:3000"
       volumes:
-        - ../src:/app/src
+        - ./src:/app/src
       environment:
         - REACT_APP_NAME=BertholdsBed-dev
         - WATCHPACK_POLLING=true
