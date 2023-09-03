@@ -1,9 +1,9 @@
 FROM node:20-alpine3.18 as build
 LABEL authors="Nar Varg"
-WORKDIR /app
-COPY ../package.json .
+WORKDIR ../app
+COPY package.json .
 RUN npm install
-COPY .. .
+COPY . .
 ARG REACT_APP_NAME
 ENV REACT_APP_NAME=$REACT_APP_NAME
 RUN npm run build
