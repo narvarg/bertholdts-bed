@@ -18,4 +18,3 @@ This repository handles the development and deployments for [https://bertholdtsb
 * Clone the repository using `git clone https://github.com/NarVarg/BertholdtsBed.git`
 * Run the commands `cd BertholdtsBed` and `npm run dev` to install and run the containerized application
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser
-* 
