@@ -6,7 +6,7 @@ This repository handles the development and deployments for [https://bertholdtsb
 
 ## To run the project:
 
-# On local:
+### On local:
 * Clone the repository using `git clone https://github.com/NarVarg/BertholdtsBed.git`
 * Run the commands `cd BertholdtsBed` to enter the project directory and `npm install` to retrieve the NodeJS dependencies
 * Generate API keys for [WeatherAPI](https://www.weatherapi.com) and [OpenAI's GPT-3.5](https://platform.openai.com/account/api-keys) and save them individually to separate files
@@ -14,7 +14,7 @@ This repository handles the development and deployments for [https://bertholdtsb
 * Use `npm start` to run the application in development mode
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser
 
-# On Docker:
+### On Docker:
 * Install and setup [Docker](https://www.docker.com/)
 * Clone the repository using `git clone https://github.com/NarVarg/BertholdtsBed.git`
 * Run the commands `cd BertholdtsBed` and `npm run dev` to install and run the containerized application
