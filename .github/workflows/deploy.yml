@@ -9,12 +9,15 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name : Setup Docker
+        uses: actions/setup-docker@v3
+        with:
+          docker-version: '20'
       - name: Build and Deploy
         run: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
