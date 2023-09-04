@@ -50,7 +50,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: craco build
+    - run: npm install --save @craco/craco
+    - run: npm run build
     - run: npm run test
 
   cypress-run:
