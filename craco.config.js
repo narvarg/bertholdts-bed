@@ -1,4 +1,4 @@
-module.exports = {
+const webpackConfig = {
     webpack: {
         configure: {
             module: {
@@ -14,3 +14,5 @@ module.exports = {
         },
     },
 };
+
+export default webpackConfig;
