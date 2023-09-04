@@ -4,12 +4,9 @@
 name: Compile/Test
 
 on:
-  push:
-    branches:
-      - 'master'
-      - 'dev'
-      - 'temp/**'
-    types: [opened, reopened]
+  workflow_run:
+    workflows: [CodeQL]
+    types: requested
 
 jobs:
   eslint:
