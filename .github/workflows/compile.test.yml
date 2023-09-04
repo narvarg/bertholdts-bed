@@ -4,11 +4,9 @@
 name: Compile/Test
 
 on:
-  workflow_run:
-    workflows: [CodeQL]
+  pull_request:
     branches: [master, dev]
-    types:
-      - completed
+    types: [opened, reopened]
 
 jobs:
   eslint:
@@ -52,8 +50,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - run: craco build
+    - run: npm run test
 
   cypress-run:
     runs-on: ubuntu-latest
