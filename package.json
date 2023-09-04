@@ -1,7 +1,8 @@
 {
   "name": "bertholdtsbed",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -38,14 +39,5 @@
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-cypress": "^2.14.0",
     "eslint-plugin-prettier": "^5.0.0"
-  },
-  "ava": {
-    "files": [
-      "test/**/*.js"
-    ],
-    "require": [
-      "babel-register"
-    ],
-    "babel": "inherit"
   }
 }
