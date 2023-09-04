@@ -4,8 +4,11 @@
 name: Compile/Test
 
 on:
-  pull_request:
-    branches: [master, dev]
+  push:
+    branches:
+      - 'master'
+      - 'dev'
+      - 'temp/**'
     types: [opened, reopened]
 
 jobs:
