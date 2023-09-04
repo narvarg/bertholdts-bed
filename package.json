@@ -34,15 +34,18 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
     "ava": "^5.3.1",
-    "esm": "^3.2.25",
     "cypress": "^13.1.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-cypress": "^2.14.0",
     "eslint-plugin-prettier": "^5.0.0"
   },
   "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
     "require": [
-      "esm"
-    ]
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
