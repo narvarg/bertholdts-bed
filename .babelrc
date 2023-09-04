@@ -1,6 +1,6 @@
 {
   "presets": [
     "@babel/preset-env",
-    ["@babel/preset-react", { "runtime": "automatic" }, "es2015"]
+    ["@babel/preset-react", { "runtime": "automatic" }]
   ]
 }
