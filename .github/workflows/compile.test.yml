@@ -49,7 +49,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: for i in ci 'install --save @craco/craco' 'run build' 'run test'; do npm $i; done
+    - run: for i in ci 'install --save @craco/craco' 'run build' 'run test'; do npm --experimental-modules $i; done
 
   cypress-run:
     runs-on: ubuntu-latest
