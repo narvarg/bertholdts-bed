@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<h1>Hello,</h1>
-				<h1>Welcome to Bertholdt's Bed.</h1>
+				<h1>Welcome!</h1>
 			</header>
 		</div>
 	);
