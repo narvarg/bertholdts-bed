@@ -2,7 +2,7 @@
 
 ## *"The training Corps made a game of using Bertholdt's sleeping positions to predict the weather"*
 
-This repository handles the development and deployments for [https://bertholdtsbed.com](https://bertholdtsbed.com), an AI/ML-driven weather application
+This repository handles the development and deployments for [https://bertholdtsbed.greatmage.com](https://bertholdtsbed.greatmage.com), an AI/ML-driven weather application
 
 ## To run the project
 
@@ -16,8 +16,8 @@ This repository handles the development and deployments for [https://bertholdtsb
 
 ### On Docker:
 * Install and setup [Docker](https://www.docker.com/)
-* Clone the repository using `git clone https://github.com/NarVarg/BertholdtsBed.git`
-* Run the commands `cd BertholdtsBed` and `npm run dev` to install and run the containerized application
+* Clone the repository using `git clone https://github.com/greatmage/bertholdts-bed.git`
+* Run the commands `cd bertholdts-bed` and `npm run dev` to install and run the containerized application
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser
 
 ## Testing
